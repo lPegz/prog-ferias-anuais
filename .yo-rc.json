@@ -1,0 +1,48 @@
+{
+  "generator-jhipster": {
+    "jhipsterVersion": "3.12.1",
+    "baseName": "prog_ferias_anuais",
+    "packageName": "br.pegz.ciandt",
+    "packageFolder": "br/pegz/ciandt",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "enableSocialSignIn": true,
+    "rememberMeKey": "3a1794fc7c572c6c2b75368a5207e5648eb5c930",
+    "useSass": true,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-swagger-cli",
+        "version": "2.0.5"
+      },
+      {
+        "name": "generator-jhipster-material",
+        "version": "0.0.0"
+      },
+      {
+        "name": "generator-jhipster-google-analytics",
+        "version": "0.0.1"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "pt-br",
+      "en"
+    ]
+  }
+}
