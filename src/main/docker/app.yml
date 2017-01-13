@@ -1,0 +1,16 @@
+version: '2'
+services:
+    prog_ferias_anuais-app:
+        image: prog_ferias_anuais
+        external_links:
+            - prog_ferias_anuais-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/prog_ferias_anuais
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    prog_ferias_anuais-postgresql:
+        extends:
+            file: postgresql.yml
+            service: prog_ferias_anuais-postgresql
