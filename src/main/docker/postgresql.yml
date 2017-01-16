@@ -1,0 +1,12 @@
+version: '2'
+services:
+    vacationplanner-postgresql:
+        container_name: vacationplanner-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/vacationplanner/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=vacationplanner
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
