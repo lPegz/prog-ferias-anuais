@@ -1,0 +1,23 @@
+{
+    "vacationplannerApp": {
+        "department" : {
+            "home": {
+                "title": "Departments",
+                "createLabel": "Criar novo Department",
+                "createOrEditLabel": "Criar ou editar Department",
+                "search": "Pesquisar por Department"
+            },
+            "created": "Um novo Department é criado com o identificador {{ param }}",
+            "updated": "Um Department é atualizado com o identificador {{ param }}",
+            "deleted": "Um Department é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Department {{ id }}?"
+            },
+            "detail": {
+                "title": "Department"
+            },
+            "name": "Name",
+            "admin": "Admin"
+        }
+    }
+}

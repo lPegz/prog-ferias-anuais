@@ -1,0 +1,47 @@
+entity Team {
+    name String
+}
+
+entity Department {
+    name String,
+}
+
+entity Teammate {
+    firstName String,
+    lastName String,
+    login String,
+    isAdmin Boolean
+}
+
+entity Vacation {
+    period Integer,
+    startDate ZonedDateTime,
+    endDate ZonedDateTime,
+    soldDays Integer,
+    tookDays Integer,
+    took Status
+}
+
+enum Status {
+    UNTAKEN, SOLD_PARTIALLY, TOOK_ALL, TOOK_PARTIALLY
+}
+
+relationship ManyToMany {
+    Team{listTeammates} to Teammate
+}
+
+relationship OneToMany {
+    Teammate{vacations} to Vacation
+}
+
+relationship ManyToOne {
+    Team{department} to Department
+}
+
+relationship OneToOne {
+    Department{admin} to Teammate
+}
+
+relationship ManyToOne {
+    Vacation{teammate} to Teammate
+}

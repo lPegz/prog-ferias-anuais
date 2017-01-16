@@ -1,0 +1,85 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myVacationLabel" data-translate="vacationplannerApp.vacation.home.createOrEditLabel">Create or edit a Vacation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.vacation.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.vacation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.period" for="field_period">Period</label>
+            <input type="number" class="form-control" name="period" id="field_period"
+                    ng-model="vm.vacation.period"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.startDate" for="field_startDate">Start Date</label>
+                <div class="input-group">
+                    <input id="field_startDate" type="text" class="form-control" name="startDate" datetime-picker="{{dateformat}}" ng-model="vm.vacation.startDate" is-open="vm.datePickerOpenStatus.startDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.endDate" for="field_endDate">End Date</label>
+                <div class="input-group">
+                    <input id="field_endDate" type="text" class="form-control" name="endDate" datetime-picker="{{dateformat}}" ng-model="vm.vacation.endDate" is-open="vm.datePickerOpenStatus.endDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.soldDays" for="field_soldDays">Sold Days</label>
+            <input type="number" class="form-control" name="soldDays" id="field_soldDays"
+                    ng-model="vm.vacation.soldDays"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.tookDays" for="field_tookDays">Took Days</label>
+            <input type="number" class="form-control" name="tookDays" id="field_tookDays"
+                    ng-model="vm.vacation.tookDays"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="vacationplannerApp.vacation.took" for="field_took">Took</label>
+            <select class="form-control" name="took" ng-model="vm.vacation.took" id="field_took">
+                <option value="UNTAKEN" data-translate="vacationplannerApp.Status.UNTAKEN">UNTAKEN</option>
+                <option value="SOLD_PARTIALLY" data-translate="vacationplannerApp.Status.SOLD_PARTIALLY">SOLD_PARTIALLY</option>
+                <option value="TOOK_ALL" data-translate="vacationplannerApp.Status.TOOK_ALL">TOOK_ALL</option>
+                <option value="TOOK_PARTIALLY" data-translate="vacationplannerApp.Status.TOOK_PARTIALLY">TOOK_PARTIALLY</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="vacationplannerApp.vacation.teammate" for="field_teammate">Teammate</label>
+            <select class="form-control" id="field_teammate" name="teammate" ng-model="vm.vacation.teammate" ng-options="teammate as teammate.id for teammate in vm.teammates track by teammate.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="vacationplannerApp.vacation.teammate" for="field_teammate">Teammate</label>
+            <select class="form-control" id="field_teammate" name="teammate" ng-model="vm.vacation.teammate" ng-options="teammate as teammate.id for teammate in vm.teammates track by teammate.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

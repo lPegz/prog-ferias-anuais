@@ -1,0 +1,62 @@
+<div>
+    <h2 data-translate="vacationplannerApp.teammate.home.title">Teammates</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="teammate.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="vacationplannerApp.teammate.home.createLabel">
+                        Create new Teammate
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="vacationplannerApp.teammate.firstName">First Name</span></th>
+                    <th><span data-translate="vacationplannerApp.teammate.lastName">Last Name</span></th>
+                    <th><span data-translate="vacationplannerApp.teammate.login">Login</span></th>
+                    <th><span data-translate="vacationplannerApp.teammate.isAdmin">Is Admin</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="teammate in vm.teammates track by teammate.id">
+                    <td><a ui-sref="teammate-detail({id:teammate.id})">{{teammate.id}}</a></td>
+                    <td>{{teammate.firstName}}</td>
+                    <td>{{teammate.lastName}}</td>
+                    <td>{{teammate.login}}</td>
+                    <td>{{teammate.isAdmin}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="teammate-detail({id:teammate.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="teammate.edit({id:teammate.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="teammate.delete({id:teammate.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

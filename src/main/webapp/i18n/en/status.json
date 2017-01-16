@@ -1,0 +1,11 @@
+{
+    "vacationplannerApp": {
+        "Status" : {
+            "null": "",
+            "UNTAKEN": "UNTAKEN",
+            "SOLD_PARTIALLY": "SOLD_PARTIALLY",
+            "TOOK_ALL": "TOOK_ALL",
+            "TOOK_PARTIALLY": "TOOK_PARTIALLY"
+        }
+    }
+}

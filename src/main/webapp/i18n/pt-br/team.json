@@ -1,0 +1,24 @@
+{
+    "vacationplannerApp": {
+        "team" : {
+            "home": {
+                "title": "Teams",
+                "createLabel": "Criar novo Team",
+                "createOrEditLabel": "Criar ou editar Team",
+                "search": "Pesquisar por Team"
+            },
+            "created": "Um novo Team é criado com o identificador {{ param }}",
+            "updated": "Um Team é atualizado com o identificador {{ param }}",
+            "deleted": "Um Team é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Team {{ id }}?"
+            },
+            "detail": {
+                "title": "Team"
+            },
+            "name": "Name",
+            "department": "Department",
+            "listTeammates": "List Teammates"
+        }
+    }
+}

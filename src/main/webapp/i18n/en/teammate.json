@@ -1,0 +1,26 @@
+{
+    "vacationplannerApp": {
+        "teammate" : {
+            "home": {
+                "title": "Teammates",
+                "createLabel": "Create a new Teammate",
+                "createOrEditLabel": "Create or edit a Teammate",
+                "search": "Search for Teammate"
+            },
+            "created": "A new Teammate is created with identifier {{ param }}",
+            "updated": "A Teammate is updated with identifier {{ param }}",
+            "deleted": "A Teammate is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Teammate {{ id }}?"
+            },
+            "detail": {
+                "title": "Teammate"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "login": "Login",
+            "isAdmin": "Is Admin",
+            "vacations": "Vacations"
+        }
+    }
+}

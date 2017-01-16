@@ -1,0 +1,74 @@
+<div>
+    <h2 data-translate="vacationplannerApp.vacation.home.title">Vacations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="vacation.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="vacationplannerApp.vacation.home.createLabel">
+                        Create new Vacation
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.period">Period</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.startDate">Start Date</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.endDate">End Date</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.soldDays">Sold Days</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.tookDays">Took Days</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.took">Took</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.teammate">Teammate</span></th>
+                    <th><span data-translate="vacationplannerApp.vacation.teammate">Teammate</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="vacation in vm.vacations track by vacation.id">
+                    <td><a ui-sref="vacation-detail({id:vacation.id})">{{vacation.id}}</a></td>
+                    <td>{{vacation.period}}</td>
+                    <td>{{vacation.startDate | date:'medium'}}</td>
+                    <td>{{vacation.endDate | date:'medium'}}</td>
+                    <td>{{vacation.soldDays}}</td>
+                    <td>{{vacation.tookDays}}</td>
+                    <td data-translate="{{'vacationplannerApp.Status.' + vacation.took}}">{{vacation.took}}</td>
+                    <td>
+                        <a ui-sref="teammate-detail({id:vacation.teammate.id})">{{vacation.teammate.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="teammate-detail({id:vacation.teammate.id})">{{vacation.teammate.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="vacation-detail({id:vacation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="vacation.edit({id:vacation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="vacation.delete({id:vacation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

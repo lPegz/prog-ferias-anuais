@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="vacationplannerApp.vacation.detail.title">Vacation</span> {{vm.vacation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="vacationplannerApp.vacation.period">Period</span></dt>
+        <dd>
+            <span>{{vm.vacation.period}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.vacation.startDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.vacation.endDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.soldDays">Sold Days</span></dt>
+        <dd>
+            <span>{{vm.vacation.soldDays}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.tookDays">Took Days</span></dt>
+        <dd>
+            <span>{{vm.vacation.tookDays}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.took">Took</span></dt>
+        <dd>
+            <span data-translate="{{'vacationplannerApp.Status.' + vm.vacation.took}}">{{vm.vacation.took}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.teammate">Teammate</span></dt>
+        <dd>
+            <a ui-sref="teammate-detail({id:vm.vacation.teammate.id})">{{vm.vacation.teammate.id}}</a>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.vacation.teammate">Teammate</span></dt>
+        <dd>
+            <a ui-sref="teammate-detail({id:vm.vacation.teammate.id})">{{vm.vacation.teammate.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vacation-detail.edit({id:vm.vacation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

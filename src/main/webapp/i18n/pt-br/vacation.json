@@ -1,0 +1,29 @@
+{
+    "vacationplannerApp": {
+        "vacation" : {
+            "home": {
+                "title": "Vacations",
+                "createLabel": "Criar novo Vacation",
+                "createOrEditLabel": "Criar ou editar Vacation",
+                "search": "Pesquisar por Vacation"
+            },
+            "created": "Um novo Vacation é criado com o identificador {{ param }}",
+            "updated": "Um Vacation é atualizado com o identificador {{ param }}",
+            "deleted": "Um Vacation é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Vacation {{ id }}?"
+            },
+            "detail": {
+                "title": "Vacation"
+            },
+            "period": "Period",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "soldDays": "Sold Days",
+            "tookDays": "Took Days",
+            "took": "Took",
+            "teammate": "Teammate",
+            "teammate": "Teammate"
+        }
+    }
+}

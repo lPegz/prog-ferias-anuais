@@ -1,0 +1,49 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "teammate",
+            "otherEntityName": "teammate",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "teammate",
+            "otherEntityName": "teammate",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "period",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "soldDays",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tookDays",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "took",
+            "fieldType": "Status",
+            "fieldValues": "UNTAKEN,SOLD_PARTIALLY,TOOK_ALL,TOOK_PARTIALLY"
+        }
+    ],
+    "changelogDate": "20170116132559",
+    "entityTableName": "vacation",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

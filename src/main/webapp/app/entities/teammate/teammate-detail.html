@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="vacationplannerApp.teammate.detail.title">Teammate</span> {{vm.teammate.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="vacationplannerApp.teammate.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.teammate.firstName}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.teammate.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.teammate.lastName}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.teammate.login">Login</span></dt>
+        <dd>
+            <span>{{vm.teammate.login}}</span>
+        </dd>
+        <dt><span data-translate="vacationplannerApp.teammate.isAdmin">Is Admin</span></dt>
+        <dd>
+            <span>{{vm.teammate.isAdmin}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="teammate-detail.edit({id:vm.teammate.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

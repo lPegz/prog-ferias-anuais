@@ -22,5 +22,17 @@
 
     <cache alias="br.pegz.ciandt.social.SocialUserConnection" uses-template="simple"/>
 
+    <cache alias="br.pegz.ciandt.domain.Team" uses-template="simple"/>
+
+    <cache alias="br.pegz.ciandt.domain.Team.listTeammates" uses-template="simple"/>
+
+    <cache alias="br.pegz.ciandt.domain.Department" uses-template="simple"/>
+
+    <cache alias="br.pegz.ciandt.domain.Teammate" uses-template="simple"/>
+
+    <cache alias="br.pegz.ciandt.domain.Teammate.vacations" uses-template="simple"/>
+
+    <cache alias="br.pegz.ciandt.domain.Vacation" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>
